@@ -1,0 +1,458 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://userInterface/button.gd" type="Script" id=1]
+[ext_resource path="res://userInterface/images/escape.png" type="Texture" id=2]
+[ext_resource path="res://userInterface/images/keys.png" type="Texture" id=3]
+[ext_resource path="res://fonts/instructionsFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://userInterface/images/dancekeys.png" type="Texture" id=5]
+[ext_resource path="res://userInterface/images/character.png" type="Texture" id=6]
+[ext_resource path="res://fonts/buttonFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://buttonStates/normalButton.tres" type="StyleBox" id=8]
+[ext_resource path="res://buttonStates/pressedButton.tres" type="StyleBox" id=9]
+[ext_resource path="res://buttonStates/hoverButton.tres" type="StyleBox" id=10]
+[ext_resource path="res://userInterface/images/space.png" type="Texture" id=11]
+[ext_resource path="res://userInterface/images/prev-level.png" type="Texture" id=12]
+[ext_resource path="res://userInterface/images/next-level.png" type="Texture" id=13]
+[ext_resource path="res://userInterface/images/xboxkeys.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/raidercrusaderchrome.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 83
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/montserrat.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+font_data = SubResource( 3 )
+
+[node name="Instructions" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bottom" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="bottom"]
+margin_left = -1353.35
+margin_top = -846.811
+margin_right = 1869.65
+margin_bottom = 1250.19
+color = Color( 0.270588, 0.580392, 0.65098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="bottom"]
+margin_left = -472.0
+margin_top = -242.0
+margin_right = 467.0
+margin_bottom = 268.0
+color = Color( 0.2184, 0.464707, 0.52, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="character" type="Sprite" parent="bottom"]
+position = Vector2( -351.377, 50.0672 )
+scale = Vector2( 0.750899, 0.750899 )
+texture = ExtResource( 6 )
+
+[node name="controls" type="Button" parent="."]
+margin_left = 299.0
+margin_top = -286.0
+margin_right = 463.0
+margin_bottom = -255.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/normal = ExtResource( 8 )
+custom_fonts/font = ExtResource( 7 )
+text = "Xbox Controls"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pc" type="Control" parent="controls"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move" type="Control" parent="controls/pc"]
+margin_left = -296.814
+margin_top = 81.545
+margin_right = -256.814
+margin_bottom = 121.545
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="movetxt" type="Label" parent="controls/pc/move"]
+margin_left = 6.0
+margin_top = 190.0
+margin_right = 195.0
+margin_bottom = 221.0
+custom_fonts/font = ExtResource( 4 )
+text = "Move character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="movearrow" type="ColorRect" parent="controls/pc/move"]
+margin_left = 187.0
+margin_top = 206.0
+margin_right = 230.0
+margin_bottom = 208.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keys" type="Sprite" parent="controls/pc/move"]
+position = Vector2( 323.75, 187.965 )
+scale = Vector2( 0.0837331, 0.0837331 )
+texture = ExtResource( 3 )
+
+[node name="changeLvl" type="Control" parent="controls/pc"]
+margin_left = -145.665
+margin_top = 170.866
+margin_right = -105.665
+margin_bottom = 210.866
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="changetxt" type="Label" parent="controls/pc/changeLvl"]
+margin_left = -130.149
+margin_top = 180.615
+margin_right = 58.8507
+margin_bottom = 211.615
+custom_fonts/font = ExtResource( 4 )
+text = "Change Levels"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="changearrow" type="ColorRect" parent="controls/pc/changeLvl"]
+margin_left = 36.8507
+margin_top = 196.615
+margin_right = 79.8507
+margin_bottom = 198.615
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next-level" type="Sprite" parent="controls/pc/changeLvl"]
+position = Vector2( 171.59, 178.777 )
+scale = Vector2( 0.0852274, 0.0852274 )
+texture = ExtResource( 13 )
+
+[node name="prev-level" type="Sprite" parent="controls/pc/changeLvl"]
+position = Vector2( 170.879, 216.617 )
+scale = Vector2( 0.0852275, 0.0852275 )
+texture = ExtResource( 12 )
+
+[node name="jump" type="Control" parent="controls/pc"]
+margin_left = -442.983
+margin_top = 299.738
+margin_right = -402.983
+margin_bottom = 339.738
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jumptxt" type="Label" parent="controls/pc/jump"]
+margin_left = 261.05
+margin_top = 127.411
+margin_right = 371.05
+margin_bottom = 155.411
+custom_fonts/font = ExtResource( 4 )
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jumparrow" type="ColorRect" parent="controls/pc/jump"]
+margin_left = 329.0
+margin_top = 143.0
+margin_right = 372.0
+margin_bottom = 145.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="space" type="Sprite" parent="controls/pc/jump"]
+position = Vector2( 467.897, 142.287 )
+scale = Vector2( 0.0959932, 0.0959932 )
+texture = ExtResource( 11 )
+
+[node name="dance" type="Control" parent="controls/pc"]
+margin_left = -313.983
+margin_top = 268.02
+margin_right = -273.983
+margin_bottom = 308.02
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt" type="Label" parent="controls/pc/dance"]
+margin_left = -122.258
+margin_top = 152.055
+margin_right = 66.7422
+margin_bottom = 183.055
+custom_fonts/font = ExtResource( 4 )
+text = "Do dance moves"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancearrow" type="ColorRect" parent="controls/pc/dance"]
+margin_left = -28.0
+margin_top = 180.0
+margin_right = 2.0
+margin_bottom = 182.0
+rect_rotation = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancekeys" type="Sprite" parent="controls/pc/dance"]
+position = Vector2( 135.536, 241.521 )
+scale = Vector2( 0.172239, 0.172239 )
+texture = ExtResource( 5 )
+
+[node name="pause" type="Control" parent="controls/pc"]
+margin_left = -660.324
+margin_top = 285.283
+margin_right = -620.324
+margin_bottom = 325.283
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pausetxt" type="Label" parent="controls/pc/pause"]
+margin_left = 141.05
+margin_top = 56.4115
+margin_right = 251.05
+margin_bottom = 84.4115
+custom_fonts/font = ExtResource( 4 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pausearrow" type="ColorRect" parent="controls/pc/pause"]
+margin_left = 216.0
+margin_top = 72.0
+margin_right = 247.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="escape" type="Sprite" parent="controls/pc/pause"]
+position = Vector2( 292.742, 72.653 )
+scale = Vector2( 0.105087, 0.105087 )
+texture = ExtResource( 2 )
+
+[node name="xbox" type="Control" parent="controls"]
+visible = false
+margin_left = 2.51984
+margin_top = 5.0397
+margin_right = 42.5198
+margin_bottom = 45.0397
+
+[node name="xboxkeys" type="Sprite" parent="controls/xbox"]
+position = Vector2( -158.004, 384.452 )
+scale = Vector2( 0.140936, 0.140936 )
+texture = ExtResource( 14 )
+
+[node name="movetxt" type="Label" parent="controls/xbox"]
+margin_left = -534.622
+margin_top = 361.744
+margin_right = -345.622
+margin_bottom = 392.744
+custom_fonts/font = ExtResource( 4 )
+text = "Move character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt1" type="Label" parent="controls/xbox"]
+margin_left = 47.517
+margin_top = 382.657
+margin_right = 236.517
+margin_bottom = 413.657
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt2" type="Label" parent="controls/xbox"]
+margin_left = 24.3538
+margin_top = 296.24
+margin_right = 213.354
+margin_bottom = 327.24
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt3" type="Label" parent="controls/xbox"]
+margin_left = 38.6081
+margin_top = 345.239
+margin_right = 227.608
+margin_bottom = 376.239
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt4" type="Label" parent="controls/xbox"]
+margin_left = -243.649
+margin_top = 498.595
+margin_right = -149.649
+margin_bottom = 529.595
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt5" type="Label" parent="controls/xbox"]
+margin_left = -355.644
+margin_top = 494.947
+margin_right = -166.644
+margin_bottom = 525.947
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt6" type="Label" parent="controls/xbox"]
+margin_left = -460.573
+margin_top = 411.845
+margin_right = -366.573
+margin_bottom = 442.845
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dancetxt7" type="Label" parent="controls/xbox"]
+margin_left = -160.949
+margin_top = 472.041
+margin_right = 28.0511
+margin_bottom = 503.041
+custom_fonts/font = ExtResource( 4 )
+text = "Dance 7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jumptxt" type="Label" parent="controls/xbox"]
+margin_left = 50.5916
+margin_top = 418.241
+margin_right = 160.592
+margin_bottom = 446.241
+custom_fonts/font = ExtResource( 4 )
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="top" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="top"]
+margin_left = -125.0
+margin_top = -110.0
+margin_right = 180.0
+margin_bottom = -24.0
+color = Color( 0.270588, 0.580392, 0.65098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backFromInstructions" type="Button" parent="top"]
+margin_left = -459.267
+margin_top = 219.199
+margin_right = -360.267
+margin_bottom = 250.199
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/normal = ExtResource( 8 )
+custom_fonts/font = ExtResource( 7 )
+text = "Back"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="instructionsTitle" type="Label" parent="top"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -225.141
+margin_top = -228.52
+margin_right = 249.859
+margin_bottom = -120.52
+custom_fonts/font = SubResource( 2 )
+text = "Instructions"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="instructionstxt" type="Label" parent="top"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -242.954
+margin_top = -124.109
+margin_right = 256.046
+margin_bottom = -55.109
+custom_fonts/font = SubResource( 4 )
+text = "Explore and dance to unlock dance 
+moves. Travel to all 4 locations and 
+unlock all 10 dance moves!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="underarrow" type="ColorRect" parent="top"]
+margin_left = -67.3125
+margin_top = -123.63
+margin_right = 116.688
+margin_bottom = -121.63
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="controls" to="controls" method="button_pressed"]
+[connection signal="pressed" from="top/backFromInstructions" to="top/backFromInstructions" method="button_pressed"]

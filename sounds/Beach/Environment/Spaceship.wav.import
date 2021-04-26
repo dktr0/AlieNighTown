@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Spaceship.wav-389b2f34a135e17c9d150d8b611ecb00.sample"
+
+[deps]
+
+source_file="res://sounds/Beach/Environment/Spaceship.wav"
+dest_files=[ "res://.import/Spaceship.wav-389b2f34a135e17c9d150d8b611ecb00.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

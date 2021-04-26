@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dance 04 - shanty.ogg-e850421d687d9349cb03b292d5959f47.oggstr"
+
+[deps]
+
+source_file="res://sounds/Hub Room/Music/dance 04 - shanty.ogg"
+dest_files=[ "res://.import/dance 04 - shanty.ogg-e850421d687d9349cb03b292d5959f47.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

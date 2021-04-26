@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shanty.ogg-2a62931f3a73dabd27cf4431f361b24e.oggstr"
+
+[deps]
+
+source_file="res://sounds/Cargo Ship/Music/shanty.ogg"
+dest_files=[ "res://.import/shanty.ogg-2a62931f3a73dabd27cf4431f361b24e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

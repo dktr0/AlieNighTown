@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dance03 - phonecall.ogg-0a4092d66ea6f2ddff68f1f228f6f19f.oggstr"
+
+[deps]
+
+source_file="res://sounds/Hub Room/Music/dance03 - phonecall.ogg"
+dest_files=[ "res://.import/dance03 - phonecall.ogg-0a4092d66ea6f2ddff68f1f228f6f19f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
